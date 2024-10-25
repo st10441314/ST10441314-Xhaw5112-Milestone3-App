@@ -12,9 +12,7 @@ import {
   Platform,
 } from 'react-native';
 import { createDrawerNavigator } from '@react-navigation/drawer';
-import { NavigationContainer } from '@react-navigation/native';
-
-// Types
+import { NavigationContainer } from '@react-navigation/n
 type Course = {
   id: number;
   name: string;
@@ -27,7 +25,6 @@ type CartItem = Course & {
   quantity: number;
 };
 
-// Home Screen
 function HomeScreen() {
   return (
     <ScrollView style={styles.container}>
@@ -61,7 +58,7 @@ function HomeScreen() {
   );
 }
 
-// Courses Screen
+
 function CoursesScreen() {
   const courses: Course[] = [
     {
@@ -109,7 +106,7 @@ function CoursesScreen() {
   );
 }
 
-// Short Courses Screen
+
 function ShortCoursesScreen() {
   const shortCourses: Course[] = [
     {
@@ -134,7 +131,7 @@ function ShortCoursesScreen() {
       image: require('./assets/garden.png'),
     },
 
-    // Add other short courses similarly
+
   ];
 
   return (
@@ -148,10 +145,8 @@ function ShortCoursesScreen() {
         </View>
       ))}
     </ScrollView>
-  );
-}
+  )
 
-// Contact Screen
 function ContactScreen() {
   return (
     <ScrollView style={styles.container}>
@@ -197,7 +192,7 @@ function ContactScreen() {
   );
 }
 
-// Apply Screen
+
 function ApplyScreen() {
   const [formData, setFormData] = useState({
     fullName: '',
